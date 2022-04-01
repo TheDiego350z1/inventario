@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('proveedores', function (Blueprint $table) {
             $table->id()->index();
             $table->text('nombre');
-            $table->text('nit', 14);
-            $table->text('ruc', 14);
-            $table->text('descripcion');
+            $table->string('nit', 14);
+            $table->string('ruc', 14);
             $table->string('dui', 9);
+            $table->text('descripcion');
             $table->timestamps();
         });
     }

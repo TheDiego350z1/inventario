@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->text('descripcion');
+            $table->double('costo');
             $table->integer('existencias');
             $table->timestamps();
         });

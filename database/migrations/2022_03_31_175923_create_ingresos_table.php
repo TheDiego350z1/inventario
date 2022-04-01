@@ -20,6 +20,8 @@ return new class extends Migration
             $table->unsignedBigInteger('id_producto');
             $table->string('factura');
             $table->integer('cantidad');
+            $table->double('costo');
+            $table->double('total');
             $table->timestamps();
 
             $table->foreign('id_proveedor')->references('id')->on('proveedores');
