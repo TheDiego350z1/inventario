@@ -15,11 +15,14 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link active="true">
+                    <x-jet-nav-link >
                         hola
                     </x-jet-nav-link>
-
-
+                    @can('ejemplo')
+                    <x-jet-nav-link href="{{ route('ejemplo') }}" :active="request()->routeIs('ejemplo')">
+                        Usuarios
+                    </x-jet-nav-link>
+                    @endcan
                 </div>
             </div>
 
