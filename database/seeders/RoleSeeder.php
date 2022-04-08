@@ -33,6 +33,6 @@ class RoleSeeder extends Seeder
 
         // Creación de permisos
         // Permission::create(['name' => 'ejemplo'])->syncRoles([$role1]) ;
-        Permission::create(['name' => 'ejemplo'])->assignRole($role1);
+        Permission::create(['name' => 'ejemplo', 'description' => 'Ejemplo de permiso'] )->assignRole($role1);
     }
 }
