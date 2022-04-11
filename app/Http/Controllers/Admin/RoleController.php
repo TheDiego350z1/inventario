@@ -90,7 +90,9 @@ class RoleController extends Controller
 
         $role->permissions()->sync($request->permissions);
 
-        return redirect()->route('admin.roles.edit', $role)->with('info', 'El rol se actualizo con Éxito');
+        return redirect()
+            ->route('admin.roles.edit', $role)
+            ->with('info', 'El rol se actualizo con Éxito');
     }
 
     /**
@@ -103,6 +105,8 @@ class RoleController extends Controller
     {
         // var_dump($role);
         $role->delete();
-        return redirect()->route('admin.roles.index')->with('info', "El rol $role->description fue eliminado con exito");
+        return redirect()
+            ->route('admin.roles.index')
+            ->with('info', "El rol $role->description fue eliminado con exito");
     }
 }
