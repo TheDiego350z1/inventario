@@ -19,11 +19,9 @@
                         {{ __('Roles') }}
                     </x-jet-nav-link>
 
-                    @can('admin')
-                        <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
-                            Usuarios
-                        </x-jet-nav-link>
-                    @endcan
+                    <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
+                        Usuarios
+                    </x-jet-nav-link>
                 </div>
             </div>
 
