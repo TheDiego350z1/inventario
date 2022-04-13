@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ProductosController;
+use App\Http\Controllers\Admin\ClientesController;
 
 // Rutas para asginación de roles
 // y permisos de usuarios
@@ -17,6 +18,13 @@ Route::resource('users', UserController::class)->names('admin.users');
 //Productos
 Route::resource('productos', ProductosController::class)->names('admin.productos');
 
+//Clientes
+Route::resource('clientes', ClientesController::class)->names('admin.clientes');
+
+
+Route::get('/Egreso-Producto', function () {
+    return view('admin.productosEgreso.index');
+})->name('admin.egreso.producto');
 
 Route::get('/sobre', function () {
     return view('sobre');

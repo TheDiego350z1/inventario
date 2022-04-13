@@ -20,6 +20,17 @@
             'route' => route('admin.productos.index'),
             'active' => request()->routeIs('admin.productos.index')
         ],
+        [
+            'name' => 'Egreso de Productos',
+            'route' => route('admin.egreso.producto'),
+            'active' => request()->routeIs('admin.egreso.producto')
+        ],
+        [
+            'name' => 'Clientes',
+            'route' => route('admin.clientes.index'),
+            'active' => request()->routeIs('admin.clientes.index')
+        ],
+
     ];
 @endphp
 
