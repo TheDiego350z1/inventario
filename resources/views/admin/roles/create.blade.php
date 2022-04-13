@@ -3,35 +3,36 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <h2 class="py-2 px-8">Crear nuevo rol</h2>
+                <div class="flex justify-center">
+                    <div class="w-80">
+                        <br>
+                        <form action="{{route('admin.roles.store')}}" method="POST" class="flex flex-col">
 
-                {!! Form::open(['route' => 'admin.roles.store']) !!}
+                            @csrf
 
-                    <div class="container">
-                        <div class="py-2 px-8">
-                            {!! Form::label('name', 'Nombre') !!}
-                            {!! Form::text('name', null, ['class' =>'form-input px-4 py-3 ']) !!}
+                            <div>
+                                <x-jet-label for="name" value="{{ __('Nombre') }}" />
+                                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                            </div>
 
-                            @error('name')
-                                <small>{{ $message }}</small>
-                            @enderror
-                        </div>
-                        <div class="container flex justify-end">
-                            {!! Form::submit('Crear Rol', ['class' => 'bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg']) !!}
-                        </div>
+                            <div class="flex items-center justify-end mt-4">
+                                <x-jet-button class="ml-4">
+                                    {{ __('Crear Rol') }}
+                                </x-jet-button>
+                            </div>
+
+                            <h2>Lista de Permisos</h2>
+                            @foreach ($permisions as $permission)
+                                <div class="py-2 px-8">
+                                    <label for=""> {{$permission->description}} </label>
+                                    <input type="checkbox" name="{{ $permission->name }}" value="1" class="form-checkbox rounded text-pink-500" />
+                                </div>
+                            @endforeach
+                        </form>
+                        <br>
                     </div>
+                </div>
 
-                    <h2>Lista de Permisos</h2>
-                    @foreach ($permisions as $permission)
-                        <div class="py-2 px-8">
-                            <label for="">
-                                {!! Form::checkbox('permisions[]', $permission->id, null, ['class' => 'form-checkbox rounded-full px-4 py-3']) !!}
-                                {{ $permission->description }}
-                            </label>
-                        </div>
-                    @endforeach
-
-                {!! Form::close() !!}
 
             </div>
         </div>
