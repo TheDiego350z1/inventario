@@ -15,6 +15,11 @@
             'route' => route('admin.users.index'),
             'active' => request()->routeIs('admin.users.index')
         ],
+        [
+            'name' => 'Ingreso de Producto',
+            'route' => route('admin.productos.index'),
+            'active' => request()->routeIs('admin.productos.index')
+        ],
     ];
 @endphp
 
@@ -32,26 +37,6 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-<<<<<<< HEAD
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('admin.roles.index') }}" :active="request()->routeIs('admin.roles.index')">
-                        {{ __('Roles') }}
-                    </x-jet-nav-link>
-
-                    <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
-                        Usuarios
-                    </x-jet-nav-link>
-
-                    <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
-                        Ingreso de Producto
-                    </x-jet-nav-link>
-
-                    <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
-                        Egreso de Producto
-                    </x-jet-nav-link>
-=======
                     @foreach($nav_links as $link)
 
                         <x-jet-nav-link href="{{ $link['route'] }}" :active="$link['active']">
@@ -59,7 +44,6 @@
                         </x-jet-nav-link>
 
                     @endforeach
->>>>>>> 5250242044a197a88e8551fe63298a620945037e
                 </div>
             </div>
 
