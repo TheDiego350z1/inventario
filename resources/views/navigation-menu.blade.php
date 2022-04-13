@@ -1,3 +1,23 @@
+@php
+    $nav_links = [
+        [
+            'name' => 'Dashboard',
+            'route' => route('dashboard'),
+            'active' => request()->routeIs('dashboard')
+        ],
+        [
+            'name' => 'Roles',
+            'route' => route('admin.roles.index'),
+            'active' => request()->routeIs('admin.roles.index')
+        ],
+        [
+            'name' => 'Usuarios',
+            'route' => route('admin.users.index'),
+            'active' => request()->routeIs('admin.users.index')
+        ],
+    ];
+@endphp
+
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,6 +32,7 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+<<<<<<< HEAD
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
@@ -30,6 +51,15 @@
                     <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
                         Egreso de Producto
                     </x-jet-nav-link>
+=======
+                    @foreach($nav_links as $link)
+
+                        <x-jet-nav-link href="{{ $link['route'] }}" :active="$link['active']">
+                            {{ __($link['name']) }}
+                        </x-jet-nav-link>
+
+                    @endforeach
+>>>>>>> 5250242044a197a88e8551fe63298a620945037e
                 </div>
             </div>
 
@@ -153,9 +183,11 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
 
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-jet-responsive-nav-link>
+            @foreach($nav_links as $link)
+                <x-jet-responsive-nav-link href="{{ $link['route']}}" :active="$link['active']">
+                    {{ __( $link['name'] ) }}
+                </x-jet-responsive-nav-link>
+            @endforeach
         </div>
 
         <!-- Responsive Settings Options -->

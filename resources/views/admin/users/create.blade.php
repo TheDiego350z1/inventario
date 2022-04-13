@@ -1,30 +1,43 @@
 <x-app-layout>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg ">
 
-                {!! Form::open(['route' => 'admin.users.store']) !!}
-                    <div class="container flex flex-col">
-                        {!! Form::label('name', 'Nombre', [null]) !!}
-                        {!! Form::text('name', null, ['class' =>'form-input px-4 py-3']) !!}
+                <div class="flex justify-center">
+                    <div class="w-80">
+                        <br>
+                        <form class="flex flex-col"  method="POST" action=" route{{'admin.users.store'}} ">
+                            @csrf
 
-                        {!! Form::label('email', 'Correo', [null]) !!}
-                        {!! Form::email('email', null, ['class' =>'form-input px-4 py-3']) !!}
+                            <div>
+                                <x-jet-label for="name" value="{{ __('Nombre') }}" />
+                                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                            </div>
+                            <div class="mt-4">
+                                <x-jet-label for="email" value="{{ __('Correo') }}" />
+                                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                            </div>
 
-                        {!! Form::label('password', 'Contraseña', [null]) !!}
-                        {!! Form::password('password', ['class' =>'form-input px-4 py-3']) !!}
+                            <div class="mt-4">
+                                <x-jet-label for="password" value="{{ __('Contraseña') }}" />
+                                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                            </div>
 
-                        {!! Form::label('password', 'Contraseña', [null]) !!}
-                        {!! Form::password('password_confirm', ['class' =>'form-input px-4 py-3']) !!}
+                            <div class="mt-4">
+                                <x-jet-label for="password_confirmation" value="{{ __('Confirmar Contraseña') }}" />
+                                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+                            </div>
 
-                        <div class="flex justify-end">
-                            {!! Form::submit('Crear Usuario', ['class' => 'bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg']) !!}
-                        </div>
+                            <div class="flex items-center justify-end mt-4">
+                                <x-jet-button class="ml-4">
+                                    {{ __('Reguistrar Usuario') }}
+                                </x-jet-button>
+                            </div>
+                        </form>
+                        <br>
                     </div>
+                </div>
 
-
-
-                {!! Form::close() !!}
 
             </div>
         </div>
