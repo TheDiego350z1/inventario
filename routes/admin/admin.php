@@ -21,7 +21,7 @@ Route::resource('productos', ProductosController::class)->names('admin.productos
 //Clientes
 Route::resource('clientes', ClientesController::class)->names('admin.clientes');
 
-
+//Vista de Egreso de productos
 Route::get('/Egreso-Producto', function () {
     return view('admin.productosEgreso.index');
 })->name('admin.egreso.producto');
