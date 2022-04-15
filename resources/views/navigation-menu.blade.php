@@ -16,7 +16,7 @@
             'active' => request()->routeIs('admin.users.index')
         ],
         [
-            'name' => 'Ingreso de Producto',
+            'name' => 'Productos',
             'route' => route('admin.productos.index'),
             'active' => request()->routeIs('admin.productos.index')
         ],
