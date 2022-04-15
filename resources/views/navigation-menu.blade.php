@@ -30,7 +30,11 @@
             'route' => route('admin.clientes.index'),
             'active' => request()->routeIs('admin.clientes.index')
         ],
-
+        [
+            'name' => 'Reportes',
+            'route' => route('admin.reportes'),
+            'active' => request()->routeIs('admin.reportes')
+        ],
     ];
 @endphp
 
