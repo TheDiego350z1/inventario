@@ -30,6 +30,6 @@ Route::get('/sobre', function () {
     return view('sobre');
 });
 
-Route::get('/reportes', function () {
-    return view('admin.reportes.index');
-})->name('admin.reportes');
+// Route::get('/reportes', function () {
+//     return view('admin.reportes.index');
+// })->name('admin.reportes');

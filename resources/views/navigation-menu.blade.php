@@ -32,8 +32,8 @@
         ],
         [
             'name' => 'Reportes',
-            'route' => route('admin.reportes'),
-            'active' => request()->routeIs('admin.reportes')
+            'route' => '/reportes',
+            'active' =>request()->routeIs('reportes.index')
         ],
     ];
 @endphp
