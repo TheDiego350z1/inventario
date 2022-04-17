@@ -3,12 +3,12 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <h2 class="text-xl mx-4">Creación de Cliente</h2>
+                <h2 class="text-xl mx-4">Creación de Proveedor</h2>
 
                 <div class="flex justify-center">
                     <div class="w-1/2">
 
-                        <form class="flex flex-col my-8"  method="POST" action=" route{{'admin.clientes.store'}} ">
+                        <form class="flex flex-col my-8"  method="POST" action=" route{{'admin.proveedores.store'}} ">
                             @csrf
 
                             <div>
@@ -40,7 +40,7 @@
 
                             <div class="flex items-center justify-end mt-4">
                                 <x-jet-button class="ml-4">
-                                    {{ __('Crear Cliente') }}
+                                    {{ __('Crear Proveedor') }}
                                 </x-jet-button>
                             </div>
 
