@@ -35,7 +35,7 @@
             'route' => route('admin.proveedores.index'),
             'active' => request()->routeIs('admin.proveedores.index')
         ],
-
+        [
             'name' => 'Reportes',
             'route' => '/reportes',
             'active' =>request()->routeIs('reportes.index')
