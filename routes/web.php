@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReportesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,14 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+//Ruta para Controlador Reportes
+//Route::get('reportes',[ReportesController::class,'index']);
+Route::controller(ReportesController::class)->group(function(){
+    Route::get('reportes','index');
+    Route::get('reportes/kardex','kardex');
+    Route::get('reportes/compras','compras');
+    Route::get('reportes/ventas','ventas');
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
