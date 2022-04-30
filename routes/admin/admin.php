@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ProductosController;
 use App\Http\Controllers\Admin\ClientesController;
+use App\Http\Controllers\Admin\ProveedoresController;
 
 // Rutas para asginación de roles
 // y permisos de usuarios
@@ -20,6 +21,9 @@ Route::resource('productos', ProductosController::class)->names('admin.productos
 
 //Clientes
 Route::resource('clientes', ClientesController::class)->names('admin.clientes');
+
+//Proveedores
+Route::resource('proveedores', ProveedoresController::class)->names('admin.proveedores');
 
 //Vista de Egreso de productos
 Route::get('/Egreso-Producto', function () {

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ClientesController extends Controller
+class ProveedoresController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ClientesController extends Controller
      */
     public function index()
     {
-       return view('admin.clientes.index');
+        return view('admin.proveedores.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class ClientesController extends Controller
      */
     public function create()
     {
-        return view('admin.clientes.create');
+        return view('admin.proveedores.create');
     }
 
     /**

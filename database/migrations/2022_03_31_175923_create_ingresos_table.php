@@ -22,6 +22,8 @@ return new class extends Migration
             $table->integer('cantidad');
             $table->double('costo');
             $table->double('total');
+            $table->dateTime('fecha_ingreso');
+
             $table->timestamps();
 
             $table->foreign('id_proveedor')->references('id')->on('proveedores');

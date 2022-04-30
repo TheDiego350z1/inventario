@@ -16,7 +16,7 @@
             'active' => request()->routeIs('admin.users.index')
         ],
         [
-            'name' => 'Ingreso de Producto',
+            'name' => 'Productos',
             'route' => route('admin.productos.index'),
             'active' => request()->routeIs('admin.productos.index')
         ],
@@ -29,6 +29,11 @@
             'name' => 'Clientes',
             'route' => route('admin.clientes.index'),
             'active' => request()->routeIs('admin.clientes.index')
+        ],
+        [
+            'name' => 'Proveedores',
+            'route' => route('admin.proveedores.index'),
+            'active' => request()->routeIs('admin.proveedores.index')
         ],
         [
             'name' => 'Reportes',
