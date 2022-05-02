@@ -13,6 +13,9 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+        {{-- LIB externas Fontawesone Free --}}
+        <link rel="stylesheet" href="{{ asset('css/lib.css') }}">
+
         @livewireStyles
 
         <!-- Scripts -->
