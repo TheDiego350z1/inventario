@@ -27,8 +27,8 @@
         ],
         [
             'name' => 'Clientes',
-            'route' => route('admin.clientes.index'),
-            'active' => request()->routeIs('admin.clientes.index')
+            'route' => route('clientes'),
+            'active' => request()->routeIs('clientes')
         ],
         [
             'name' => 'Proveedores',

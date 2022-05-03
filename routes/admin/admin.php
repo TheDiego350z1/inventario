@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+//LiveWire Components
+use App\Http\Livewire\Clientes\Clientes;
+
 // Controladores
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
@@ -20,7 +23,8 @@ Route::resource('users', UserController::class)->names('admin.users');
 Route::resource('productos', ProductosController::class)->names('admin.productos');
 
 //Clientes
-Route::resource('clientes', ClientesController::class)->names('admin.clientes');
+Route::get('clientes', Clientes::class)->name('clientes');
+// Route::resource('clientes', ClientesController::class)->names('admin.clientes');
 
 //Proveedores
 Route::resource('proveedores', ProveedoresController::class)->names('admin.proveedores');
