@@ -10,5 +10,12 @@ window.Alpine = Alpine;
  */
 window.Chart = require('chart.js');
 
+/**
+ * Integración con SweetAlert2 generación de alertas
+ *  DOC: https://sweetalert2.github.io/
+ */
+ window.Swal = require('sweetalert2')
+
+
 Alpine.start();
 

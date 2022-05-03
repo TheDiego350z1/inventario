@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id()->index();
             $table->text('nombre');
             $table->string('nit', 14)->nullable();
-            $table->string('ruc', 14);
-            $table->string('dui', 9);
+            $table->string('ruc', 14)->nullable();
+            $table->string('dui', 9)->nullable();
             $table->text('descripcion');
             $table->timestamps();
         });

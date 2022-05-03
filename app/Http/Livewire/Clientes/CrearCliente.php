@@ -35,6 +35,8 @@ class CrearCliente extends Component
             'descripcion' => $this->descripcion
         ]);
 
+        $this->emit('exito', 'Cliente creado de forma exitosa');
+
         $this->reset([
             'open',
             'nombre',
@@ -43,5 +45,6 @@ class CrearCliente extends Component
             'dui',
             'descripcion'
         ]);
+
     }
 }
