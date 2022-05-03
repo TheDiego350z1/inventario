@@ -14,9 +14,6 @@ class CrearCliente extends Component
 
     protected $rules = [
         'nombre' => 'required',
-        'nit' => 'required',
-        'ruc' => 'required',
-        'dui' => 'required',
         'descripcion' => 'required'
     ];
 
