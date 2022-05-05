@@ -17,3 +17,26 @@
 .textarea {
     @apply border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm;
 }
+/*
+ * Nueva tabla con más estilos
+ */
+
+.new-table{
+    @apply shadow-md;
+}
+
+.new-table thead {
+    @apply bg-zinc-400 border-b;
+}
+
+.new-table th {
+    @apply text-sm font-bold text-gray-900 px-6 py-4 text-left;
+}
+
+.new-table tbody > tr{
+    @apply bg-gray-100 border-b;
+}
+
+.new-table td{
+    @apply text-sm font-medium text-gray-900 px-6 py-4 whitespace-nowrap;
+}
