@@ -17,8 +17,8 @@
         ],
         [
             'name' => 'Productos',
-            'route' => route('admin.productos.index'),
-            'active' => request()->routeIs('admin.productos.index')
+            'route' => route('productos'),
+            'active' => request()->routeIs('productos')
         ],
         [
             'name' => 'Egreso de Productos',
