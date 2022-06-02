@@ -17,7 +17,11 @@ class ClientesFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombre' => $this->faker->name(),
+            'nit' => '000-0000-000-0',
+            'ruc' => '000-0000-000-0',
+            'dui' => '000000000',
+            'descripcion' => $this->faker->text(500)
         ];
     }
 }

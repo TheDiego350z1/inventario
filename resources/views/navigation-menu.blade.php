@@ -26,6 +26,11 @@
             'active' => request()->routeIs('admin.egreso.producto')
         ],
         [
+            'name' => 'Ingresos',
+            'route' => route('ingreso.productos'),
+            'active' => request()->routeIs('ingreso.productos')
+        ],
+        [
             'name' => 'Clientes',
             'route' => route('clientes'),
             'active' => request()->routeIs('clientes')

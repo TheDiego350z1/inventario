@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="container py-8 flex justify-center">
-                    <table class="new-table">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th>Nombre</th>
