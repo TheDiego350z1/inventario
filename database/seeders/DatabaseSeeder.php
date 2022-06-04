@@ -30,5 +30,11 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('1234'),
             'remember_token' => Str::random(10),
         ])->assignRole('admin');
+
+        \App\Models\Productos::factory(200)->create();
+        \App\Models\Clientes::factory(10)->create();
+        \App\Models\Proveedores::factory(10)->create();
+        \App\Models\Egresos::factory(100)->create();
+        \App\Models\Ingresos::factory(100)->create();
     }
 }

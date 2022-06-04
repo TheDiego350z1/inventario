@@ -22,6 +22,9 @@ Route::get('clientes', App\Http\Livewire\Clientes\index::class)->name('clientes'
 //Proveedores
 Route::get('proveedores', App\Http\Livewire\Proveedores\VerProveedores::class)->name('proveedores');
 
+//Ingreso Productos
+Route::get('ingresos', App\Http\Livewire\Movimientos\IngresoProductos::class)->name('ingreso.productos');
+
 //Vista de Egreso de productos
 Route::get('/Egreso-Producto', function () {
     return view('admin.productosEgreso.index');
