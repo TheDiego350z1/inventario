@@ -17,7 +17,13 @@ class ProductosFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombre' => $this->faker->word(),
+            'marca' => $this->faker->word(),
+            'codigo' => $this->faker->numerify('user-####'),
+            'sku' => $this->faker->numerify('user-####'),
+            'descripcion' => $this->faker->text(500),
+            'costo' => $this->faker->randomFloat(2),
+            'existencias' => $this->faker->randomNumber(5, false),
         ];
     }
 }

@@ -15,10 +15,9 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
-    ]);
+    ])
+    .postCss('resources/css/lib.css', 'public/css');
 
 if (mix.inProduction()) {
     mix.version();
 }
-
-mix.js('resources/js/loadBefore.js', 'public/js').sourceMaps();

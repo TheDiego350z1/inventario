@@ -17,8 +17,8 @@
         ],
         [
             'name' => 'Productos',
-            'route' => route('admin.productos.index'),
-            'active' => request()->routeIs('admin.productos.index')
+            'route' => route('productos'),
+            'active' => request()->routeIs('productos')
         ],
         [
             'name' => 'Egreso de Productos',
@@ -26,14 +26,19 @@
             'active' => request()->routeIs('admin.egreso.producto')
         ],
         [
+            'name' => 'Ingresos',
+            'route' => route('ingreso.productos'),
+            'active' => request()->routeIs('ingreso.productos')
+        ],
+        [
             'name' => 'Clientes',
-            'route' => route('admin.clientes.index'),
-            'active' => request()->routeIs('admin.clientes.index')
+            'route' => route('clientes'),
+            'active' => request()->routeIs('clientes')
         ],
         [
             'name' => 'Proveedores',
-            'route' => route('admin.proveedores.index'),
-            'active' => request()->routeIs('admin.proveedores.index')
+            'route' => route('proveedores'),
+            'active' => request()->routeIs('proveedores')
         ],
         [
             'name' => 'Reportes',

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="light">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,9 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+        {{-- LIB externas Fontawesone Free --}}
+        <link rel="stylesheet" href="{{ asset('css/lib.css') }}">
 
         @livewireStyles
 
@@ -42,5 +45,14 @@
         @stack('modals')
 
         @livewireScripts
+
+        <script>
+            Livewire.on('exito', function(message){
+                Swal.fire({
+                    icon: 'success',
+                    text: message
+                })
+            })
+        </script>
     </body>
 </html>

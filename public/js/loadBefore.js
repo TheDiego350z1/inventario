@@ -15,7 +15,7 @@
   \************************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("__webpack_require__(/*! chart.js/dist/chart.js */ \"./node_modules/chart.js/dist/chart.js\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvbG9hZEJlZm9yZS5qcy5qcyIsIm1hcHBpbmdzIjoiQUFBQUEsbUJBQU8sQ0FBQyxxRUFBRCxDQUFQIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL2pzL2xvYWRCZWZvcmUuanM/ZWVmNCJdLCJzb3VyY2VzQ29udGVudCI6WyJyZXF1aXJlKCdjaGFydC5qcy9kaXN0L2NoYXJ0LmpzJyk7XG4iXSwibmFtZXMiOlsicmVxdWlyZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/loadBefore.js\n");
+eval("__webpack_require__(/*! chart.js/dist/chart.js */ \"./node_modules/chart.js/dist/chart.js\"); // window.Chart = require('chart.js');//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvbG9hZEJlZm9yZS5qcy5qcyIsIm1hcHBpbmdzIjoiQUFBQUEsbUJBQU8sQ0FBQyxxRUFBRCxDQUFQLEMsQ0FFQSIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9qcy9sb2FkQmVmb3JlLmpzP2VlZjQiXSwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZSgnY2hhcnQuanMvZGlzdC9jaGFydC5qcycpO1xuXG4vLyB3aW5kb3cuQ2hhcnQgPSByZXF1aXJlKCdjaGFydC5qcycpO1xuIl0sIm5hbWVzIjpbInJlcXVpcmUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/loadBefore.js\n");
 
 /***/ }),
 

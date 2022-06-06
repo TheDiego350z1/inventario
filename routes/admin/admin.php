@@ -5,9 +5,6 @@ use Illuminate\Support\Facades\Route;
 // Controladores
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Admin\ProductosController;
-use App\Http\Controllers\Admin\ClientesController;
-use App\Http\Controllers\Admin\ProveedoresController;
 
 // Rutas para asginación de roles
 // y permisos de usuarios
@@ -17,13 +14,16 @@ Route::resource('roles', RoleController::class)->names('admin.roles');
 Route::resource('users', UserController::class)->names('admin.users');
 
 //Productos
-Route::resource('productos', ProductosController::class)->names('admin.productos');
+Route::get('productos', App\Http\Livewire\Productos\VerProductos::class)->name('productos');
 
 //Clientes
-Route::resource('clientes', ClientesController::class)->names('admin.clientes');
+Route::get('clientes', App\Http\Livewire\Clientes\index::class)->name('clientes');
 
 //Proveedores
-Route::resource('proveedores', ProveedoresController::class)->names('admin.proveedores');
+Route::get('proveedores', App\Http\Livewire\Proveedores\VerProveedores::class)->name('proveedores');
+
+//Ingreso Productos
+Route::get('ingresos', App\Http\Livewire\Movimientos\IngresoProductos::class)->name('ingreso.productos');
 
 //Vista de Egreso de productos
 Route::get('/Egreso-Producto', function () {

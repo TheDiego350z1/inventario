@@ -17,7 +17,13 @@ class IngresosFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'no_ingreso' => $this->faker->randomNumber(5, false),
+            'id_proveedor' => rand(1,10),
+            'id_producto' => rand(1,200),
+            'factura' => $this->faker->randomNumber(5, false),
+            'cantidad' => $cantidad = rand(1,100),
+            'costo' => $costo = $this->faker->randomFloat(2),
+            'total' => ($cantidad * $costo)
         ];
     }
 }

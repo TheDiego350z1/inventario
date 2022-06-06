@@ -1,0 +1,48 @@
+/* .table th, .table td {
+    @apply border border-gray-400 px-4 py-2;
+}
+
+.table th {
+    @apply text-gray-800;
+}
+
+.button-blue {
+    @apply bg-indigo-600 text-white text-sm leading-6 uppercase after:font-medium py-2 px-3 mx-1 rounded-lg;
+}
+
+.button-white {
+    @apply bg-green-400 text-black text-sm leading-6 uppercase after:font-medium py-2 px-3 mx-1 rounded-lg;
+}
+
+.textarea {
+    @apply border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm;
+} */
+/*
+ * Nueva tabla con más estilos
+ */
+
+/* .new-table{
+    @apply shadow-md;
+}
+
+.new-table thead {
+    @apply bg-zinc-400 border-b;
+}
+
+.new-table th {
+    @apply text-sm font-bold text-gray-900 px-6 py-4 text-left;
+}
+
+.new-table tbody > tr{
+    @apply bg-gray-100 border-b;
+}
+
+.new-table td{
+    @apply text-sm font-medium text-gray-900 px-6 py-4 whitespace-nowrap;
+} */
+
+/* Select */
+
+/* .select {
+    @apply border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm;
+} */
