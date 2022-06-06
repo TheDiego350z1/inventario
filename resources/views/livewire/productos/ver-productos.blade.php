@@ -26,7 +26,7 @@
                                 <th>Marca</th>
                                 <th>Código</th>
                                 <th>SKU</th>
-                                <th>Descripción</th>
+                                {{-- <th>Descripción</th> --}}
                                 <th>Existencias</th>
                             </tr>
                         </thead>
@@ -37,7 +37,7 @@
                                     <td>{{ $producto->marca }}</td>
                                     <td>{{ $producto->codigo }}</td>
                                     <td>{{ $producto->sku }}</td>
-                                    <td>{{ $producto->descripcion }}</td>
+                                    {{-- <td>{{ $producto->descripcion }}</td> --}}
                                     <td>{{ $producto->existencias }}</td>
                                 </tr>
                             @endforeach
@@ -45,9 +45,12 @@
                     </table>
                 </div>
 
+                <div class="mb-4 mx-16"">
+                    {{$productos->links()}}
+                </div>
+
             </div>
 
-            {{$productos->links()}}
 
         </div>
 

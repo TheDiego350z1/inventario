@@ -16,8 +16,11 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-import'),
         require('tailwindcss'),
     ])
-    .postCss('resources/css/lib.css', 'public/css');
+    .postCss('resources/css/lib.css', 'public/css')
+    .js('resources/js/loadBefore.js', 'public/js');
 
 if (mix.inProduction()) {
     mix.version();
 }
+
+// mix.js('resources/js/loadBefore.js', 'public/js').sourceMaps();

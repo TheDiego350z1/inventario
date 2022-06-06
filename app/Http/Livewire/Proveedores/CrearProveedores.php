@@ -46,4 +46,16 @@ class CrearProveedores extends Component
             'descripcion'
         ]);
     }
+
+    public function out()
+    {
+        $this->reset([
+            'open',
+            'nombre',
+            'nit',
+            'dui',
+            'ruc',
+            'descripcion'
+        ]);
+    }
 }

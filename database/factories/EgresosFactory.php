@@ -17,13 +17,14 @@ class EgresosFactory extends Factory
     public function definition()
     {
         return [
-            'no_egreos' => $this->faker->randomNumber(5, false),
+            'egreso_no' => $this->faker->randomNumber(5, false),
             'id_cliente' => rand(1,10),
             'id_producto' => rand(1,200),
             'factura' => $this->faker->randomNumber(5, false),
             'cantidad' => $cantidad = rand(1,100),
             'costo' => $costo = $this->faker->randomFloat(2),
-            'total' => ($cantidad * $costo)
+            'total' => ($cantidad * $costo),
+            'fecha_egreso' => $this->faker->date(),
         ];
     }
 }

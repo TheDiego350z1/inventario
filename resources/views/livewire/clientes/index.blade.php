@@ -14,7 +14,17 @@
                 <div class="flex justify-center">
                     <div class="w-1/2">
                         <x-jet-label for="name" value="{{ __('Buscar Cliente') }}" />
-                        <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" wire:model="buscar_cliente" />
+                        <x-jet-input
+                            id="name"
+                            class="block mt-1 w-full"
+                            type="text"
+                            name="name"
+                            :value="old('name')"
+                            required
+                            autofocus
+                            autocomplete="name"
+                            wire:model="buscar_cliente"
+                        />
                     </div>
                 </div>
 
@@ -41,7 +51,9 @@
                         </tbody>
                     </table>
                 </div>
-                {{$clientes->links()}}
+                <div class="mb-4 mx-16">
+                    {{$clientes->links()}}
+                </div>
 
             </div>
         </div>
