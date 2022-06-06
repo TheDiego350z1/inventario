@@ -20,6 +20,11 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        {{-- ChartJS --}}
+
+        {{-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> --}}
+
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />

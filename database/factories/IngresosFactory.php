@@ -23,6 +23,7 @@ class IngresosFactory extends Factory
             'factura' => $this->faker->randomNumber(5, false),
             'cantidad' => $cantidad = rand(1,100),
             'costo' => $costo = $this->faker->randomFloat(2),
+            'fecha_ingreso' => $this->faker->date(),
             'total' => ($cantidad * $costo)
         ];
     }

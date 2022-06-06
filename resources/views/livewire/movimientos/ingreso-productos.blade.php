@@ -6,12 +6,22 @@
                 <div class="flex justify-center">
                     <div class="w-1/2">
                         <x-jet-label value="{{ __('Buscar Producto') }}" />
-                        <x-jet-input class="block mt-1 w-full" type="text" name="Buscar Producto" required autofocus wire:model="buscar_producto" wire:keydown.enter="buscar" />
+                        <x-jet-input
+                            class="block mt-1 w-full"
+                            type="text"
+                            name="Buscar Producto"
+                            required
+                            autofocus
+                            wire:model="buscar_producto"
+                            wire:keydown.enter="buscar"
+                        />
 
-                        @if ($productos)
-                            <select class="w-full select overflow-hidden" size="4">
+                        @if (count($productos) > 0)
+                            <select class="w-full select select-bordered select-lg" size="10">
                                     @foreach($productos as $producto)
-                                    <option value="{{$producto->id}}">{{$producto->nombre}}</option>
+                                    <option value="{{$producto->id}}">
+                                        {{$producto->nombre}}
+                                    gi</option>
                                     @endforeach
                             </select>
                         @endif
@@ -30,12 +40,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach ($clientes as $cliente)
+                            {{-- @foreach ($productos as $producto)
                                 <tr>
-                                    <td>{{ $cliente->nombre }}</td>
-                                    <td>{{ $cliente->dui }}</td>
-                                    <td>{{ $cliente->nit }}</td>
-                                    <td>{{ $cliente->ruc }}</td>
+                                    <td>{{ $productos->nombre }}</td>
+                                    <td>{{ $productos->marca }}</td>
+                                    <td>{{ $productos->nit }}</td>
+                                    <td>{{ $productos->ruc }}</td>
                                 </tr>
                             @endforeach --}}
                         </tbody>

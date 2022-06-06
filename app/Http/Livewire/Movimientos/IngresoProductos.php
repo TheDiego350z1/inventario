@@ -10,7 +10,7 @@ class IngresoProductos extends Component
 {
     public $buscar_producto = '';
 
-    public $productos = [];
+    public $productos = [], $lista = [];
 
     public function render()
     {

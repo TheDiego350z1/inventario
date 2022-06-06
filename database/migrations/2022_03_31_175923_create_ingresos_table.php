@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('cantidad');
             $table->double('costo');
             $table->double('total');
-            // $table->dateTime('fecha_ingreso');
+            $table->dateTime('fecha_ingreso');
 
             $table->timestamps();
 

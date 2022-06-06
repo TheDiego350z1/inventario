@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('cantidad');
             $table->double('costo');
             $table->double('total');
-            // $table->dateTime('fecha_egreso');
+            $table->dateTime('fecha_egreso');
             $table->timestamps();
 
             $table->foreign('id_cliente')->references('id')->on('clientes');
