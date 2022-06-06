@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('egresos', function (Blueprint $table) {
             $table->id();
-            $table->string('no_egreos');
+            $table->string('egreso_no');
             $table->unsignedBigInteger('id_cliente');
             $table->unsignedBigInteger('id_producto');
             $table->string('factura');

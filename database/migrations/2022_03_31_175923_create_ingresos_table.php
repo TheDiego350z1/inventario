@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('ingresos', function (Blueprint $table) {
             $table->id();
-            $table->string('no_ingreso');
+            $table->string('ingreso_no');
             $table->unsignedBigInteger('id_proveedor');
             $table->unsignedBigInteger('id_producto');
             $table->string('factura');
