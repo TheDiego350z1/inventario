@@ -22,7 +22,8 @@ Route::get('/', function () {
 //Route::get('reportes',[ReportesController::class,'index']);
 Route::controller(ReportesController::class)->group(function(){
     Route::get('reportes','index');
-    Route::get('reportes/kardex','kardex');
+    Route::get('reportes/inventario','inventario');
+    Route::get('reportes/kardex/{codigo}','kardex');
     Route::get('reportes/compras','compras');
     Route::get('reportes/ventas','ventas');
 });
