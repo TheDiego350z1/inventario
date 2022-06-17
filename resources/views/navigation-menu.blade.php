@@ -5,16 +5,16 @@
             'route' => route('dashboard'),
             'active' => request()->routeIs('dashboard')
         ],
-        [
-            'name' => 'Roles',
-            'route' => route('admin.roles.index'),
-            'active' => request()->routeIs('admin.roles.index')
-        ],
-        [
-            'name' => 'Usuarios',
-            'route' => route('admin.users.index'),
-            'active' => request()->routeIs('admin.users.index')
-        ],
+        // [
+        //     'name' => 'Roles',
+        //     'route' => route('admin.roles.index'),
+        //     'active' => request()->routeIs('admin.roles.index')
+        // ],
+        // [
+        //     'name' => 'Usuarios',
+        //     'route' => route('admin.users.index'),
+        //     'active' => request()->routeIs('admin.users.index')
+        // ],
         [
             'name' => 'Productos',
             'route' => route('productos'),
