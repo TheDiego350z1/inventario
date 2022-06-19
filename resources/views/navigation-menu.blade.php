@@ -21,9 +21,9 @@
             'active' => request()->routeIs('productos')
         ],
         [
-            'name' => 'Egreso de Productos',
-            'route' => route('admin.egreso.producto'),
-            'active' => request()->routeIs('admin.egreso.producto')
+            'name' => 'Egreso',
+            'route' => route('egresos.productos'),
+            'active' => request()->routeIs('egresos.productos')
         ],
         [
             'name' => 'Ingresos',
