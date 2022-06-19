@@ -1,10 +1,10 @@
 @php
     $nav_links = [
-        [
-            'name' => 'Dashboard',
-            'route' => route('dashboard'),
-            'active' => request()->routeIs('dashboard')
-        ],
+        // [
+        //     'name' => 'Dashboard',
+        //     'route' => route('dashboard'),
+        //     'active' => request()->routeIs('dashboard')
+        // ],
         // [
         //     'name' => 'Roles',
         //     'route' => route('admin.roles.index'),

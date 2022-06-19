@@ -38,12 +38,12 @@
                                     <td>{{ $producto->marca }}</td>
                                     <td>{{ $producto->codigo }}</td>
                                     <td>{{ $producto->sku }}</td>
-                                    <td>{{ Str::limit($producto->descripcion,50) }}</td>
+                                    <td>{{ Str::limit($producto->descripcion,30) }}</td>
                                     <td>{{ $producto->existencias }}</td>
                                     <td>
                                         <a href="/reportes/kardex/{{ $producto->codigo }}" target="_blank" class="btn-xs bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Kardex</a>
-                                        <a href="/productos/edit/{{ $producto->codigo }}" class="btn-xs bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Editar</a>
-                                        <a href="/productos/edit/{{ $producto->codigo }}" class="btn-xs bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Eliminar</a>
+                                        {{-- <a href="/productos/edit/{{ $producto->codigo }}" class="btn-xs bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Editar</a> --}}
+                                        {{-- <a href="/productos/edit/{{ $producto->codigo }}" class="btn-xs bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Eliminar</a> --}}
                                     </td>
                                 </tr>
                             @endforeach
